@@ -37,12 +37,12 @@
   <p align="center">
     Utilizing machine learning, analyze subreddits for hate speech
     <br />
-    <a href="https://github.com/rpsmith77/RedditSentimentAnalyzer"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/rpsmith77/RedDictio"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/rpsmith77/RedditSentimentAnalyzer/issues">Report Bug</a>
+    <a href="https://github.com/rpsmith77/RedDictio/issues">Report Bug</a>
     ·
-    <a href="https://github.com/rpsmith77/RedditSentimentAnalyzer/issues">Request Feature</a>
+    <a href="https://github.com/rpsmith77/RedDictio/issues">Request Feature</a>
   </p>
 </div>
 
@@ -107,7 +107,7 @@ At this time we aren't looking for any contributors. If you feel like you have a
 Jairo Garciga - [Linkedin](https://www.linkedin.com/in/jairo-garciga/) <br />
 Ryan Smith - [Linkedin](https://www.linkedin.com/in/ryan--smith/)
 
-Project Link: [https://github.com/rpsmith77/RedditSentimentAnalyzer](https://github.com/rpsmith77/RedditSentimentAnalyzer)
+Project Link: [https://github.com/rpsmith77/RedDictio](https://github.com/rpsmith77/RedDictio)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -127,11 +127,11 @@ Thank you to everyone who helped with this. Special shout out to:
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/rpsmith77/RedditSentimentAnalyzer.svg?style=for-the-badge
-[contributors-url]: https://github.com/rpsmith77/RedditSentimentAnalyzer/graphs/contributors
-[stars-shield]: https://img.shields.io/github/stars/rpsmith77/RedditSentimentAnalyzer.svg?style=for-the-badge
-[stars-url]: https://github.com/rpsmith77/RedditSentimentAnalyzer/stargazers
-[issues-shield]: https://img.shields.io/github/issues/rpsmith77/RedditSentimentAnalyzer.svg?style=for-the-badge
-[issues-url]: https://github.com/rpsmith77/RedditSentimentAnalyzer/issues
-[license-shield]: https://img.shields.io/github/license/rpsmith77/RedditSentimentAnalyzer.svg?style=for-the-badge
-[license-url]: https://github.com/rpsmith77/RedditSentimentAnalyzer/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/rpsmith77/RedDictio.svg?style=for-the-badge
+[contributors-url]: https://github.com/rpsmith77/RedDictio/graphs/contributors
+[stars-shield]: https://img.shields.io/github/stars/rpsmith77/RedDictio.svg?style=for-the-badge
+[stars-url]: https://github.com/rpsmith77/RedDictio/stargazers
+[issues-shield]: https://img.shields.io/github/issues/rpsmith77/RedDictio.svg?style=for-the-badge
+[issues-url]: https://github.com/rpsmith77/RedDictio/issues
+[license-shield]: https://img.shields.io/github/license/rpsmith77/RedDictio.svg?style=for-the-badge
+[license-url]: https://github.com/rpsmith77/RedDictio/blob/master/LICENSE.txt
