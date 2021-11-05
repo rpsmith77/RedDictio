@@ -1,6 +1,3 @@
 # created by virtualenv automatically
 *
-/pyvenv.cfg
-/lib
-/include
-/bin
+!/venv/
