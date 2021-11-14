@@ -32,7 +32,7 @@
     <img src="static/images/logo.svg" alt="Logo" width="100" height="100">
   </a>
 
-<h3 align="center">RedDicto</h3>
+<h3 align="center">RedDictio</h3>
 
   <p align="center">
     Utilizing machine learning, analyze subreddits for hate speech
