@@ -3,6 +3,8 @@
 {% block title %}Posts{% endblock %}
 
 {% block body %}
+    <!-- Instructions -->
+    <p>Click on the row to see all comments from that post</p>
     <div class="content">
 
         <div class="row">
@@ -12,12 +14,12 @@
                     <table class="displayDB" id="post">
                         <thead>
                         <tr>
-                            <th onclick="sortTable(0)">Post Title</th>
+                            <th onclick="sortTable(0)">r/{{ subreddit_name }} Post Title</th>
                             <th onclick="sortTable(1)">Empty for now</th>
                         </tr>
                         </thead>
                         {% for post in posts %}
-                            <tr>
+                            <tr onclick="window.location='/comment/{{ post.post_id }}'">
                                 <td>
                                     {{ post.post_title }}
                                 </td>

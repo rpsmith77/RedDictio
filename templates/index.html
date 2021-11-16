@@ -3,6 +3,8 @@
 {% block title %}RedDictio{% endblock %}
 
 {% block body %}
+    <!-- Instructions -->
+    <p>Click on the row to see all posts from that subreddit</p>
     <div class="content">
 
         <div class="row">
@@ -13,16 +15,16 @@
                         <thead>
                         <tr>
                             <th onclick="sortTable(0)">Subreddit Name</th>
-                            <th onclick="sortTable(1)">Likelihood of a comment <br/>containing potential hate</th>
+                            <th onclick="sortTable(1)">Likelihood of a comment <br/>containing hateful language</th>
                         </tr>
                         </thead>
                         {% for subreddit in subreddits %}
-                            <tr>
+                            <tr onclick="window.location='/post/{{ subreddit.subreddit_name }}{{ subreddit.subreddit_id }}'">
                                 <td>
-                                    <a href="/post/{{ subreddit.subreddit_id }}">{{ subreddit.subreddit_name }}</a>
+                                    {{ subreddit.subreddit_name }}
                                 </td>
                                 <td>
-                                    {{ subreddit.hate_level }}
+                                    {{ "%.5f" % ((1 - subreddit.hate_level) * 100) }}%
                                 </td>
                             </tr>
                         {% endfor %}

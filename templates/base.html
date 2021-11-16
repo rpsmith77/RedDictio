@@ -34,8 +34,28 @@
 </head>
 <body>
 
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col">
+        <h2>How this works</h2>
+        <p>
+            Our program collects comments from the most popular posts from some of the most popular subreddits.
+            The program sends analyzes those comments, utilizing a neural network, to detect the likelihood
+            of a comment containing hateful speech. The neural network <strong>DOES NOT</strong> tell indicate whether
+            or not the comment definitively contains hate.
+        </p>
+        <h2>Instructions</h2>
+    </div>
+    <div class="col-3"></div>
+</div>
 
 {% block body %}{% endblock %}
+
+<footer class="bg-light text-center text-lg-start">
+    <div class="text-center p-3">
+        <h5>Check out our <a href="https://github.com/rpsmith77/RedDictio">github</a></h5>
+    </div>
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"

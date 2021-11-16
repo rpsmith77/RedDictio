@@ -45,16 +45,19 @@ class Comments(db.Model):
         return '<%r>' % self.subreddit_id
 
 
+subreddits = Subreddits.query.order_by(Subreddits.last_edited).all()
+
+
 @app.route('/', methods=["GET"])
 @app.route('/index')  # multiple routes to same page
 def home():
-    return render_template('index.html', subreddits=Subreddits.query.order_by(Subreddits.last_edited).all())
+    return render_template('index.html', subreddits=subreddits)
 
 
-@app.route('/post/<subreddit_id>', methods=['GET'])
-def subreddit_posts(subreddit_id):
+@app.route('/post/<subreddit_name><subreddit_id>', methods=['GET'])
+def subreddit_posts(subreddit_id, subreddit_name):
     return render_template('subreddit_posts.html', posts=Posts.query.order_by(Posts.post_title).filter(
-        Posts.subreddit_id == subreddit_id))
+        Posts.subreddit_id == subreddit_id), subreddit_name=subreddit_name)
 
 
 @app.route('/comment/<post_id>', methods=['GET'])

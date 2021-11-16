@@ -1,10 +1,11 @@
 {% extends "base.html" %}
 
-{% block title %}Posts{% endblock %}
+{% block title %}Comments{% endblock %}
 
 {% block body %}
     <div class="content">
-
+        <!-- Instructions -->
+        <p>Remember this is just the likelihood of hateful language, not a guarantee one way or another</p>
         <div class="row">
             <div class="col-3"></div>
             <div class="col">
@@ -13,13 +14,13 @@
                         <thead>
                         <tr>
                             <th onclick="sortTable(0)">Comment</th>
-                            <th onclick="sortTable(1)">Hate Value</th>
+                            <th onclick="sortTable(1)">Likelihood of Hateful Language</th>
                         </tr>
                         </thead>
                         {% for comment in comments %}
                             <tr>
                                 <td>{{ comment.comment_text }}</td>
-                                <td>{{ comment.comment_hate }}</td>
+                                <td>{{ "%.5f" % ((1 - comment.comment_hate) * 100) }}%</td>
                             </tr>
                         {% endfor %}
                     </table>
