@@ -6,27 +6,30 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///RedditDB.db'
 db = SQLAlchemy(app)
 
 
-class Subreddit(db.Model):
+class Subreddits(db.Model):
     """
         Tmp for nn
     """
-    id = db.Column(db.Integer, primary_key=True)  # Primary Key (Unique ID for db)
-    name = db.Column(db.String(200), nullable=False)  # Text entered by user
-    score = db.Column(db.Float, nullable=False)
-    date_updated = db.Column(db.DateTime, default=datetime.utcnow)  # Date and time entered
+    subreddit_id = db.Column(db.Integer, primary_key=True)  # Primary Key (Unique ID for db)
+    subreddit_name = db.Column(db.TEXT, nullable=False)  # Text entered by user
+    hate_level = db.Column(db.DECIMAL, nullable=False)
+    last_edited = db.Column(db.DATE)  # Date and time entered
+    being_edited = db.Column(db.BOOLEAN)
 
     def __repr__(self):
-        return '<%r>' % self.id
+        return '<%r>' % self.subreddit_id
+
+
+subreddit_scores = Subreddits.query.order_by(Subreddits.last_edited).all()
 
 
 @app.route('/', methods=["GET"])
 @app.route('/index')  # multiple routes to same page
 def home():
-    subreddit_scores = Subreddit.query.order_by(Subreddit.date_updated).all()
     return render_template('index.html', subreddit_scores=subreddit_scores)
 
 

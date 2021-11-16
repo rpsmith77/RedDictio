@@ -19,21 +19,21 @@
                         </thead>
                         {% for subreddit in subreddit_scores %}
                             <tr>
-                                <td>{{ subreddit.name }}</td>
-                                {% if subreddit.score > 0.9 %}
+                                <td>{{ subreddit.subreddit_name }}</td>
+                                {% if subreddit.hate_level > 0.9 %}
                                     <td>Extremely Unlikely</td>
-                                {% elif subreddit.score > 0.7 %}
+                                {% elif subreddit.hate_level > 0.7 %}
                                     <td>Very Unlikely</td>
-                                {% elif subreddit.score > 0.5 %}
+                                {% elif subreddit.hate_level > 0.5 %}
                                     <td>Unlikely</td>
-                                {% elif subreddit.score > 0.3 %}
+                                {% elif subreddit.hate_level > 0.3 %}
                                     <td>Likely</td>
-                                {% elif subreddit.score > 0.1 %}
+                                {% elif subreddit.hate_level > 0.1 %}
                                     <td>Very Likely</td>
                                 {% else %}
                                     <td>Extremely Likely</td>
                                 {% endif %}
-                                <td>{{ subreddit.score }}</td>
+                                <td>{{ subreddit.hate_level }}</td>
 
                             </tr>
                         {% endfor %}
