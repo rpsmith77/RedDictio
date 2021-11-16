@@ -41,6 +41,8 @@ table {
 
 th, td {
     padding: 8px 16px;
+    max-width: 150px;
+    word-wrap: break-word;
 }
 
 th {

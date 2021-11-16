@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}RedDictio{% endblock %}
+{% block title %}Posts{% endblock %}
 
 {% block body %}
     <div class="content">
@@ -9,21 +9,17 @@
             <div class="col-3"></div>
             <div class="col">
                 <div class="sr">
-                    <table class="displayDB" id="subreddit">
+                    <table class="displayDB" id="comment">
                         <thead>
                         <tr>
-                            <th onclick="sortTable(0)">Subreddit Name</th>
-                            <th onclick="sortTable(1)">Likelihood of a comment <br/>containing potential hate</th>
+                            <th onclick="sortTable(0)">Comment</th>
+                            <th onclick="sortTable(1)">Hate Value</th>
                         </tr>
                         </thead>
-                        {% for subreddit in subreddits %}
+                        {% for comment in comments %}
                             <tr>
-                                <td>
-                                    <a href="/post/{{ subreddit.subreddit_id }}">{{ subreddit.subreddit_name }}</a>
-                                </td>
-                                <td>
-                                    {{ subreddit.hate_level }}
-                                </td>
+                                <td>{{ comment.comment_text }}</td>
+                                <td>{{ comment.comment_hate }}</td>
                             </tr>
                         {% endfor %}
                     </table>
@@ -92,9 +88,6 @@
         </div>
 
     </div>
-
-
-
 
 
 {% endblock %}
