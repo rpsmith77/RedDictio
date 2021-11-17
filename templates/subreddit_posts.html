@@ -19,12 +19,12 @@
                         </tr>
                         </thead>
                         {% for post in posts %}
-                            <tr onclick="window.location='/comment/{{ post.post_id }}'">
+                            <tr onclick="window.location='/comment/{{ post.post_id }}/{{ post.post_title }}'">
                                 <td>
                                     {{ post.post_title }}
                                 </td>
                                 <td>
-                                    <a href="/comment/{{ post.post_id }}">Link to comments</a>
+                                    <a href="/comment/{{ post.post_id }}/{{ post.post_title }}">Link to comments</a>
                                 </td>
                             </tr>
                         {% endfor %}

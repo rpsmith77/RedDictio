@@ -9,12 +9,14 @@
         <div class="row">
             <div class="col-3"></div>
             <div class="col">
+                <h3>Post Title</h3>
+                <p>{{ post_title }}</p>
                 <div class="sr">
                     <table class="displayDB" id="comment">
                         <thead>
                         <tr>
                             <th onclick="sortTable(0)">Comment</th>
-                            <th onclick="sortTable(1)">Likelihood of Hateful Language</th>
+                            <th onclick="sortTable(1)">Neural Network's perceived <br>likelihood of potential hate</th>
                         </tr>
                         </thead>
                         {% for comment in comments %}

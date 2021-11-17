@@ -15,11 +15,12 @@
                         <thead>
                         <tr>
                             <th onclick="sortTable(0)">Subreddit Name</th>
-                            <th onclick="sortTable(1)">Likelihood of a comment <br/>containing hateful language</th>
+                            <th onclick="sortTable(1)">Percent of comments flagged <br>for potentially hateful
+                                language</th>
                         </tr>
                         </thead>
                         {% for subreddit in subreddits %}
-                            <tr onclick="window.location='/post/{{ subreddit.subreddit_name }}{{ subreddit.subreddit_id }}'">
+                            <tr onclick="window.location='/post/{{ subreddit.subreddit_name }}/{{ subreddit.subreddit_id }}'">
                                 <td>
                                     {{ subreddit.subreddit_name }}
                                 </td>
