@@ -15,7 +15,9 @@
                         <thead>
                         <tr>
                             <th onclick="sortTable(0)">r/{{ subreddit_name }} Post Title</th>
-                            <th onclick="sortTable(1)">Empty for now</th>
+                            <th onclick="sortTable(1)">Percent of comments flagged <br>for potentially hateful
+                                language
+                            </th>
                         </tr>
                         </thead>
                         {% for post in posts %}
@@ -24,7 +26,11 @@
                                     {{ post.post_title }}
                                 </td>
                                 <td>
-                                    <a href="/comment/{{ post.post_id }}/{{ post.post_title }}">Link to comments</a>
+                                    {% if post.hate_level != None %}
+                                        {{ "%.5f" % ((1 - post.hate_level) * 100) }}%
+                                    {% else %}
+                                        Data Unavailable
+                                    {% endif %}
                                 </td>
                             </tr>
                         {% endfor %}
