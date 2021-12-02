@@ -69,9 +69,6 @@ def subreddit_comments(post_id, post_title):
                            post_title=post_title)
 
 
-# @app.route('/dashboard', methods=['GET'])
-# def dashboard():
-#     return render_template('dashboard.html', subreddits=subreddits)
 
 
 if __name__ == '__main__':

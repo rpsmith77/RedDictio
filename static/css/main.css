@@ -50,4 +50,16 @@ th {
     background: #eee;
 }
 
+.chart-container {
+    position: relative;
+    margin: auto;
+    height: 80vh;
+    width: 80vw;
+}
+
+canvas {
+    margin: 0 auto;
+}
+
+
 

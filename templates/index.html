@@ -9,48 +9,22 @@
 
     <div class="content">
 
-        <div class="row">
+        <div class="row ">
             <div class="col-3"></div>
             <div class="col">
-                <canvas id="myChart" width="400" height="400"></canvas>
-                <div class="sr">
-                    <table class="displayDB" id="subreddit">
-                        <thead>
-                        <tr>
-                            <th>Subreddit Name</th>
-                            <th>Percent of comments flagged <br>for potentially hateful
-                                language
-                            </th>
-                        </tr>
-                        </thead>
-                        {% for subreddit in subreddits %}
-                            <tr onclick="window.location='/post/{{ subreddit.subreddit_name }}/{{ subreddit.subreddit_id }}'">
-                                <td>
-                                    {{ subreddit.subreddit_name }}
-                                </td>
-                                <td>
-                                    {% if subreddit.hate_level != None %}
-                                        {{ "%.5f" % ((1 - subreddit.hate_level) * 100) }}%
-                                    {% else %}
-                                        Data Unavailable
-                                    {% endif %}
-                                </td>
-                            </tr>
-                        {% endfor %}
-                    </table>
 
+                <div class="chart-container row h-100">
+                    <canvas id="myChart"></canvas>
                 </div>
+
             </div>
             <div class="col-3"></div>
         </div>
 
     </div>
 
-    <script src="../static/js/core/popper.min.js"></script>
-    <script src="../static/js/core/bootstrap.min.js"></script>
-    <script src="../static/js/plugins/perfect-scrollbar.min.js"></script>
-    <script src="../static/js/plugins/smooth-scrollbar.min.js"></script>
-    <script src="../static/js/plugins/chartjs.min.js"></script>
+
+
 
     <script>
         var chartData = {
@@ -67,16 +41,25 @@
         };
         const ctx = document.getElementById('myChart').getContext('2d');
         const myChart = new Chart(ctx, {
-            type: 'bar',
-            data: chartData,
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: false
+                type: 'bar',
+                data: chartData,
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: false
+                        }
+                    },
+                    onClick: function (e) {
+                        var activePoints = myChart.getElementsAtEvent(e, 'nearest', { intersect: true }, true);
+                        var firstPoint = activePoints[0];
+                        console.log(firstPoint)
+                        window.open("/post/filler_text/" + (firstPoint._index + 1), "_self");
+
                     }
                 }
             }
-        });
+        );
+
     </script>
 
 
