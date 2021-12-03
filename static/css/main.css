@@ -17,6 +17,14 @@ nav {
     box-shadow: 0 6px 8px 0 rgba(0,0,0,.2);
 }
 
+nav button:hover, nav li:hover {
+    background: #CCC;
+    border-radius: 5px;
+    transition: background-color 0.1s ease-in-out;
+}
+
+/* The Body of the Page */
+
 body {
     text-align: center;
     font-family: "Courier New", serif;
@@ -25,8 +33,6 @@ body {
     background: rgb(255,133,127);
     background: linear-gradient(180deg, rgba(255,133,127,1) 0%, rgba(255,53,53,1) 100%);
     color: #eeeeee;
-
-    height: 100%;
 }
 
 /* The Row */
