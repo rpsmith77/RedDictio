@@ -69,6 +69,9 @@ def subreddit_comments(post_id, post_title):
                            post_title=post_title)
 
 
+@app.route('/about_us', methods=['GET'])
+def about_us():
+    return render_template('about_us.html')
 
 
 if __name__ == '__main__':
