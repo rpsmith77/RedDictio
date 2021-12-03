@@ -1,3 +1,5 @@
+/* Sets background for entire page */
+
 .header {
     position: fixed;
     width: 100%;
@@ -23,12 +25,21 @@ body {
     background: rgb(255,133,127);
     background: linear-gradient(180deg, rgba(255,133,127,1) 0%, rgba(255,53,53,1) 100%);
     color: #eeeeee;
+
+    height: 100%;
 }
 
 /* The Row */
 .row {
     width: 100%;
-
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    margin: 0;
+}
+.row .col {
+    max-width: 60%;
+    justify-content: center;
 }
 
 /* Tables */
@@ -90,7 +101,7 @@ th {
     position: relative;
     margin: auto;
     height: 80vh;
-    width: 80vw;
+    width: 80%;
     background: #f2f2f2;
     border-radius: 10px;
 }
@@ -110,4 +121,13 @@ canvas {
     border-bottom-right-radius: 10px;
 }
 
+/* Changing style based on screen size*/
+@media (max-width:800px) {
+    .row .col {
+        max-width: 90%;
+    }
 
+    body {
+        height: 100vh;
+    }
+}
