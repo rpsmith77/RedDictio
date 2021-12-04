@@ -54,8 +54,9 @@ def home():
     return render_template('index.html', subreddits=subreddits)
 
 
-@app.route('/post/<subreddit_name>/<subreddit_id>', methods=['GET'])
-def subreddit_posts(subreddit_id, subreddit_name):
+@app.route('/post/<subreddit_name>', methods=['GET'])
+def subreddit_posts(subreddit_name):
+    subreddit_id = Subreddits.query.filter(Subreddits.subreddit_name == subreddit_name).first().subreddit_id
     return render_template('subreddit_posts.html',
                            posts=Posts.query.order_by(Posts.post_title).filter(Posts.subreddit_id == subreddit_id,
                                                                                Posts.hate_level is not None),

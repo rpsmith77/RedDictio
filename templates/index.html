@@ -47,7 +47,8 @@
                         var activePoints = myChart.getElementsAtEvent(e, 'nearest', { intersect: true }, true);
                         var firstPoint = activePoints[0];
                         console.log(firstPoint)
-                        window.open("/post/filler_text/" + (firstPoint._index + 1), "_self");
+                        console.log(firstPoint._view['label'])
+                        window.open("/post/" + firstPoint._view['label'], "_self");
 
                     }
                 }
