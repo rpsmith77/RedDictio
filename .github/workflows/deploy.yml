@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - master
+env:
+  DB_CONNECTION: ${{ secrets.DB_CONNECTION }}
 jobs:
   setup-build-publish-deploy:
     name: Setup, Build, Publish, and Deploy
