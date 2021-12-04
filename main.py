@@ -7,13 +7,12 @@ from os import environ
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = environ.get('DB_CONNECTION')
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///RedditDB.db'
 db = SQLAlchemy(app)
+# db.create_all()
 
 
 class Subreddits(db.Model):
-    """
-        Table Subreddits from RedditDB.db
-    """
     subreddit_id = db.Column(db.INTEGER, primary_key=True)  # Primary Key (Unique ID for db)
     subreddit_name = db.Column(db.TEXT, nullable=False)  # Text entered by user
     hate_level = db.Column(db.FLOAT, nullable=False)
