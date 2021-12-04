@@ -3,10 +3,10 @@ on:
   push:
     branches:
       - master
-env:
-  DB_CONNECTION: ${{ secrets.DB_CONNECTION }}
 jobs:
   setup-build-publish-deploy:
+    env:
+      DB_CONNECTION: ${{ secrets.DB_CONNECTION }}
     name: Setup, Build, Publish, and Deploy
     runs-on: ubuntu-latest
     steps:
