@@ -1,3 +1,7 @@
+html {
+    height: 100%;
+}
+
 .header {
     position: fixed;
     width: 100%;
@@ -31,12 +35,15 @@ body {
     padding-bottom: 100px;
     background: rgb(255,133,127);
     background: linear-gradient(180deg, rgba(255,133,127,1) 0%, rgba(255,53,53,1) 100%);
+    background-attachment: fixed;
     color: #eeeeee;
 }
 
 /* Chart */
 .chart {
     height: 200vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 /* The Row */
@@ -82,7 +89,7 @@ tr:hover {
 .sr {
     background-color: #eeeeee;
     overflow: auto;
-    height: 600px;
+    height: 70vh;
     text-align: left;
     color: black;
     border-radius: 10px;
@@ -116,6 +123,14 @@ th {
     width: 80%;
     background: #f2f2f2;
     border-radius: 10px;
+}
+
+.posts {
+    height: 100%;
+}
+
+.posts_table {
+    height: 90%;
 }
 
 canvas {
