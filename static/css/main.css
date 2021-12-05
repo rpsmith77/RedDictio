@@ -26,6 +26,7 @@ nav button:hover, nav li:hover {
 /* The Body of the Page */
 
 body {
+    height: 100%;
     text-align: center;
     font-family: "Courier New", serif;
     -webkit-font-smoothing: antialiased;
@@ -81,6 +82,7 @@ tr:hover {
 }
 
 .sr {
+    background-color: #eeeeee;
     overflow: auto;
     height: 600px;
     text-align: left;
@@ -125,6 +127,15 @@ canvas {
 /* Scroll bar stuff */
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
+    background-color: #aaa;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #999;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #888;
 }
 
 ::-webkit-scrollbar {
