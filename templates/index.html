@@ -38,13 +38,14 @@
                 type: 'horizontalBar',
                 data: chartData,
                 options: {
+                    maintainAspectRatio: false,
                     scales: {
                         y: {
                             beginAtZero: false
                         }
                     },
                     onClick: function (e) {
-                        var activePoints = myChart.getElementsAtEvent(e, 'nearest', { intersect: true }, true);
+                        var activePoints = myChart.getElementsAtEvent(e, 'nearest', {intersect: true}, true);
                         var firstPoint = activePoints[0];
                         console.log(firstPoint)
                         console.log(firstPoint._view['label'])
