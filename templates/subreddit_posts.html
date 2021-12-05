@@ -21,7 +21,7 @@
                         </tr>
                         </thead>
                         {% for post in posts %}
-                            <tr onclick="window.location='/comment/{{ post.post_id }}/{{ post.post_title }}'">
+                            <tr onclick="window.location='/comment/{{ post.post_id }}'">
                                 <td>
                                     {{ post.post_title }}
                                 </td>

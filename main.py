@@ -63,8 +63,9 @@ def subreddit_posts(subreddit_name):
                            subreddit_name=subreddit_name)
 
 
-@app.route('/comment/<post_id>/<post_title>', methods=['GET'])
-def subreddit_comments(post_id, post_title):
+@app.route('/comment/<post_id>', methods=['GET'])
+def subreddit_comments(post_id):
+    post_title = Posts.query.filter(Posts.post_id == post_id).first().post_title
     return render_template('subreddit_comments.html',
                            comments=Comments.query.order_by(Comments.comment_id).filter(Comments.post_id == post_id),
                            post_title=post_title)
