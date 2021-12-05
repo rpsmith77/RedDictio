@@ -45,7 +45,7 @@ class Comments(db.Model):
         return '<%r>' % self.subreddit_id
 
 
-subreddits = Subreddits.query.order_by(Subreddits.subreddit_id).all()
+subreddits = Subreddits.query.order_by(Subreddits.subreddit_name).all()
 
 
 @app.route('/', methods=['GET'])
