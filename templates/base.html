@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='images/logo.svg') }}">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+    <!-- Title slot -->
     <title>{% block  title %}{% endblock %}</title>
     <!-- Nav bar -->
     <div class="header_height">
@@ -38,23 +39,7 @@
 </head>
 <body>
 
-<div class="row">
-{#    <div class="col-3"></div>#}
-    <div class="col">
-        <h2>How this works</h2>
-        <p>
-            Our program collects comments from the most popular posts from some of the most popular subreddits.
-            The program sends analyzes those comments, utilizing a neural network, to detect the likelihood
-            of a comment containing hateful speech. The neural network <strong>DOES NOT</strong> tell indicate whether
-            or not the comment definitively contains hate.
-        </p>
-        <h2>Instructions</h2>
-    </div>
-   {#   <div class="col-3"></div> #}
-</div>
-
 {% block body %}{% endblock %}
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"

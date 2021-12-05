@@ -3,22 +3,15 @@
 {% block title %}RedDictio{% endblock %}
 
 {% block body %}
-    <!-- Instructions -->
-    <p>Click on the row to see all posts from that subreddit</p>
 
-
+    <!-- Subreddit Chart -->
     <div class="content chart">
-
         <div class="row">
             <div class="chart-container row h-100">
                 <canvas id="myChart"></canvas>
             </div>
         </div>
-
     </div>
-
-
-
 
     <script>
         var chartData = {
@@ -47,10 +40,7 @@
                     onClick: function (e) {
                         var activePoints = myChart.getElementsAtEvent(e, 'nearest', {intersect: true}, true);
                         var firstPoint = activePoints[0];
-                        console.log(firstPoint)
-                        console.log(firstPoint._view['label'])
                         window.open("/post/" + firstPoint._view['label'], "_self");
-
                     }
                 }
             }
