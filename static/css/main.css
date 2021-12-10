@@ -2,11 +2,16 @@ html {
     height: 100%;
 }
 
+/* Header */
 .header {
     position: fixed;
     width: 100%;
     height: 90px;
     z-index: 1;
+}
+
+.header li {
+    font-weight: bolder;
 }
 
 .header_height {
