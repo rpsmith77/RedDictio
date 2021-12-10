@@ -1,41 +1,21 @@
-
 <div id="top"></div>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
 
 <!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![Contributors][contributors-shield]][contributors-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-<!-- [![MIT License][license-shield]][license-url] -->
-
-
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github-deploy-32npb3w5ma-uc.a.run.app">
+  <a href="https://reddictio.com/" target="_blank">
     <img src="static/images/logo.svg" alt="Logo" width="100" height="100">
   </a>
 
 <h3 align="center">RedDictio</h3>
 
   <p align="center">
-    Utilizing machine learning, analyze subreddits for hate speech
+    Utilizing machine learning, to analyze subreddit comments for hate/toxicity.
     <br />
     <a href="https://github.com/rpsmith77/RedDictio"><strong>Explore the docs »</strong></a>
     <br />
@@ -45,8 +25,6 @@
     <a href="https://github.com/rpsmith77/RedDictio/issues">Request Feature</a>
   </p>
 </div>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -64,48 +42,55 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Utilizing machine learning, analyze subreddits for hate speech
+RedDictio is overall a test of our ability to create a webpage, hook it up to a hosted database, scrape data from
+reddit, and judge this data using a neural network. It connects to several fields in computing such as Database Design,
+Data Engineering, Data Science, Machine Learning, Cloud Computing, and Web Development.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 ### Built With
 
-* [Flask](https://flask.palletsprojects.com/en/2.0.x/)
-* [Google Colab](https://colab.research.google.com/)
-* [TensorFlow](https://www.tensorflow.org/)
+#### Neural Network
+
 * [Python](https://www.python.org/)
-* [Github](https://github.com/)
+* [Google Colab](https://colab.research.google.com/)
+* [Keras](https://keras.io/api/)
+* [Pandas](https://pandas.pydata.org/docs/)
 * [PRAW](https://praw.readthedocs.io/en/stable/)
-* [Google App Engine](https://cloud.google.com/)
+
+#### Web Page
+
+* [Python](https://www.python.org/)
+* [Flask](https://flask.palletsprojects.com/en/2.0.x/)
+* [Github](https://github.com/)
+* [Google Cloud Run](https://cloud.google.com/run/docs)
+* [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
+* [Docker](https://docs.docker.com/)
+* [Chart.js](https://www.chartjs.org/docs/latest/)
+* [Gunicorn](https://gunicorn.org/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-
-
 <!-- CONTRIBUTING -->
+
 ## Contributing
 
-At this time we aren't looking for any contributors. If you feel like you have an idea that would benifit this project, please feel free to contact either Jairo or Ryan
+At this time we aren't looking for any contributors. If you feel like you have an idea that would benefit this project,
+please feel free to contact either Jairo or Ryan.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 <!-- CONTACT -->
+
 ## Contact
 
-Jairo Garciga - [Linkedin](https://www.linkedin.com/in/jairo-garciga/) <br />
-Ryan Smith - [Linkedin](https://www.linkedin.com/in/ryan--smith/)
+Jairo Garciga - [Linkedin](https://www.linkedin.com/in/jairo-garciga/) | [Github](https://github.com/Jgar157) <br />
+Ryan Smith - [Linkedin](https://www.linkedin.com/in/ryan--smith/) | [Github](https://github.com/rpsmith77/)
 
 Project Link: [https://github.com/rpsmith77/RedDictio](https://github.com/rpsmith77/RedDictio)
 
@@ -114,12 +99,15 @@ Project Link: [https://github.com/rpsmith77/RedDictio](https://github.com/rpsmit
 
 
 <!-- ACKNOWLEDGMENTS -->
+
 ## Acknowledgments
+
 Thank you to everyone who helped with this. Special shout out to:
 
 * Professor Greenwell
-* Dr. Koufakou
-* Caffine
+* Stackoverflow
+* Caffeine
+* [Viewers Like You](https://www.youtube.com/watch?v=EVwOHHFr9_E)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -127,11 +115,15 @@ Thank you to everyone who helped with this. Special shout out to:
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/rpsmith77/RedDictio.svg?style=for-the-badge
+
 [contributors-url]: https://github.com/rpsmith77/RedDictio/graphs/contributors
+
 [stars-shield]: https://img.shields.io/github/stars/rpsmith77/RedDictio.svg?style=for-the-badge
+
 [stars-url]: https://github.com/rpsmith77/RedDictio/stargazers
+
 [issues-shield]: https://img.shields.io/github/issues/rpsmith77/RedDictio.svg?style=for-the-badge
+
 [issues-url]: https://github.com/rpsmith77/RedDictio/issues
-[license-shield]: https://img.shields.io/github/license/rpsmith77/RedDictio.svg?style=for-the-badge
-[license-url]: https://github.com/rpsmith77/RedDictio/blob/master/LICENSE.txt
