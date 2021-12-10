@@ -107,6 +107,7 @@ please feel free to contact either Jairo or Ryan.
 Jairo Garciga - [Linkedin](https://www.linkedin.com/in/jairo-garciga/) | [Github](https://github.com/Jgar157) <br />
 Ryan Smith - [Linkedin](https://www.linkedin.com/in/ryan--smith/) | [Github](https://github.com/rpsmith77/)
 
+
 Project Link: [https://github.com/rpsmith77/RedDictio](https://github.com/rpsmith77/RedDictio)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -120,7 +121,7 @@ Project Link: [https://github.com/rpsmith77/RedDictio](https://github.com/rpsmit
 Thank you to everyone who helped with this. Special shout out to:
 
 * Professor Greenwell
-* Stackoverflow
+* [This "Deploy To Google Cloud Run Using Github Actions" tutorial](https://towardsdatascience.com/deploy-to-google-cloud-run-using-github-actions-590ecf957af0)
 * Caffeine
 * [Viewers Like You](https://www.youtube.com/watch?v=EVwOHHFr9_E)
 
