@@ -24,7 +24,7 @@
                                 <td>{{ comment.comment_text }}</td>
                                 <td>
                                     {% if comment.comment_hate != None %}
-                                        {{ "%.5f" % ((1 - comment.comment_hate) * 100) }}%
+                                        {{ "%.2f" % ((1 - comment.comment_hate) * 100) }}%
                                     {% else %}
                                         Data Unavailable
                                     {% endif %}

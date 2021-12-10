@@ -27,7 +27,7 @@
                                 </td>
                                 <td>
                                     {% if post.hate_level != None %}
-                                        {{ "%.5f" % ((1 - post.hate_level) * 100) }}%
+                                        {{ "%.2f" % ((1 - post.hate_level) * 100) }}%
                                     {% else %}
                                         Data Unavailable
                                     {% endif %}

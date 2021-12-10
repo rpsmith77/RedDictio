@@ -7,9 +7,7 @@ from os import environ
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = environ.get('DB_CONNECTION')
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///RedditDB.db'
 db = SQLAlchemy(app)
-# db.create_all()
 
 
 class Subreddits(db.Model):
