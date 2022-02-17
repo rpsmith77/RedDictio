@@ -1,13 +1,15 @@
 """
  Filler for testing
 """
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
+from flask_marshmallow import Marshmallow
 from os import environ
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = environ.get('DB_CONNECTION')
 db = SQLAlchemy(app)
+ma = Marshmallow(app)
 
 
 class Subreddits(db.Model):
@@ -43,6 +45,21 @@ class Comments(db.Model):
         return '<%r>' % self.subreddit_id
 
 
+class SubredditsSchema(ma.SQLAlchemyAutoSchema):
+    class Meta:
+        model = Subreddits
+
+
+class PostsSchema(ma.SQLAlchemyAutoSchema):
+    class Meta:
+        model = Posts
+
+
+class CommentsSchema(ma.SQLAlchemyAutoSchema):
+    class Meta:
+        model = Comments
+
+
 subreddits = Subreddits.query.order_by(Subreddits.subreddit_name).all()
 
 
@@ -72,6 +89,15 @@ def subreddit_comments(post_id):
 @app.route('/about_us', methods=['GET'])
 def about_us():
     return render_template('about_us.html')
+
+
+@app.route('/api')
+def api():
+    subreddits_schema = SubredditsSchema(many=True)
+    # too many comments to add to api
+    # posts_schema = PostsSchema(many=True)
+    # comments_schema = CommentsSchema(many=True)
+    return jsonify({'Subreddits': subreddits_schema.dump(subreddits)})
 
 
 if __name__ == '__main__':

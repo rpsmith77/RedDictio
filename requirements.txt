@@ -1,6 +1,7 @@
 cachelib==0.4.1
 click==8.0.3
 Flask==2.0.2
+flask-marshmallow==0.14.0
 Flask-Session==0.4.0
 Flask-SQLAlchemy==2.5.1
 greenlet==1.1.2
@@ -8,12 +9,15 @@ gunicorn==20.1.0
 itsdangerous==2.0.1
 Jinja2==3.0.2
 MarkupSafe==2.0.1
+marshmallow==3.14.1
+marshmallow-sqlalchemy==0.27.0
 mysql-connector-python==8.0.27
 packaging==21.3
 protobuf==3.19.1
 PyMySQL==1.0.2
 pyparsing==3.0.6
 sip==6.4.0
+six==1.16.0
 SQLAlchemy==1.4.26
 toml==0.10.2
 Werkzeug==2.0.2
