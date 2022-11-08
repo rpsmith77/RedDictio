@@ -1,1 +1,12 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1000"><defs><style>.cls-1{fill:url(#linear-gradient);}.cls-2{font-size:733.36px;fill:#fff;font-family:Courier;}</style><linearGradient id="linear-gradient" x1="500" y1="969.35" x2="500" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff3535"/><stop offset="1" stop-color="#ff857f"/></linearGradient></defs><rect class="cls-1" width="1000" height="969.35" rx="150.35"/><text class="cls-2" transform="translate(45.99 699.92) scale(1.03 1)">RD</text></svg>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 1000 1000">
+    <defs>
+        <style>.cls-1{fill:url(#linear-gradient);}.cls-2{font-size:733.36px;fill:#fff;font-family:Courier;}</style>
+        <linearGradient id="linear-gradient" x1="500" y1="969.35" x2="500" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#ff3535"/>
+            <stop offset="1" stop-color="#ff857f"/>
+        </linearGradient>
+    </defs>
+    <rect class="cls-1" width="1000" height="969.35" rx="150.35"/>
+    <text class="cls-2" transform="translate(45.99 699.92) scale(1.03 1)">RD</text>
+</svg>
